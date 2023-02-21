@@ -14,7 +14,7 @@ export default function Welcome() {
     <Container>
       <img src={Robot} alt="" />
       <h1>
-        Welcome, <span>{userName}!</span>
+        Welcome, <span>{userName.replace('@gmail.com','')}!</span>
       </h1>
       <h3>Please select a chat to Start messaging.</h3>
     </Container>

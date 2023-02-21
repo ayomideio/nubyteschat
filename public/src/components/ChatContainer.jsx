@@ -77,10 +77,11 @@ export default function ChatContainer({ currentChat, socket }) {
             <img
               src={`${process.env.REACT_APP_PRODUCTION_BACKEND}/docmanagement/files${currentChat.avatarImage}`}
               alt=""
+              style={{borderRadius:'50%',width:'50px', verticalAlign:'middle'}}
             />
           </div>
           <div className="username">
-            <h3>{currentChat.username}</h3>
+            <h3>{currentChat.username.replace('@gmail.com','')}</h3>
           </div>
         </div>
         <Logout />

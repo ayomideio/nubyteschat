@@ -38,25 +38,27 @@ export default function Contacts({ contacts, changeChat }) {
                   <div className="avatar">
                     <img
                       src={`${process.env.REACT_APP_PRODUCTION_BACKEND}/docmanagement/files${contact.avatarImage}`}
-                      alt=""
+                      alt="useravatar"
+                      style={{borderRadius:'50%',width:'50px',verticalAlign:'middle'}}
                     />
                   </div>
                   <div className="username">
-                    <h3>{contact.username}</h3>
+                    <h3>{contact.username.replace('@gmail.com','')}</h3>
                   </div>
                 </div>
               );
             })}
           </div>
           <div className="current-user">
-            <div className="avatar">
+            {/* <div className="avatar">
               <img
                src={`${process.env.REACT_APP_PRODUCTION_BACKEND}/docmanagement/files${currentUserImage}`}
                alt="avatar"
+               style={{borderRadius:'50%', verticalAlign:'middle'}}
               />
-            </div>
+            </div> */}
             <div className="username">
-              <h2>{currentUserName}</h2>
+              <h2>{currentUserName.replace('@gmail.com','')}</h2>
             </div>
           </div>
         </Container>
